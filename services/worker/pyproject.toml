@@ -1,0 +1,31 @@
+# services/worker/pyproject.toml
+[tool.poetry]
+name = "vproxysuite-worker"
+version = "0.1.0"
+description = "VProxySuite Worker/Runner (Celery) — executes test plugins for VLESS/VMESS"
+authors = ["Navid Arianpour <navid.arianpour1987@proton.me>"]
+readme = "README.md"
+packages = []
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+celery = {version = "^5.3.6", extras = ["redis"]}
+pydantic = "^2.6.0"
+pydantic-settings = "^2.2.1"
+orjson = "^3.10.3"
+idna = "^3.6"           # برای اعتبارسنجی دامنه‌ها
+yarl = "^1.9.4"         # برای پارس URL
+typing-extensions = "^4.10.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+isort = "^5.13.2"
+mypy = "^1.9.0"
+flake8 = "^7.0.0"
+pytest = "^8.1.1"
+pytest-asyncio = "^0.23.5"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"

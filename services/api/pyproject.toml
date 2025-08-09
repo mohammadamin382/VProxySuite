@@ -1,0 +1,33 @@
+# services/api/pyproject.toml
+[tool.poetry]
+name = "vproxysuite-api"
+version = "0.1.0"
+description = "VProxySuite API & Orchestrator (FastAPI + SQLAlchemy async)"
+authors = ["Navid Arianpour <navid.arianpour1987@proton.me>"]
+readme = "README.md"
+packages = []
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.111.0"
+uvicorn = {version = "^0.29.0", extras = ["standard"]}
+pydantic = "^2.6.0"
+pydantic-settings = "^2.2.1"
+SQLAlchemy = "^2.0.29"
+asyncpg = "^0.29.0"
+alembic = "^1.13.1"
+redis = "^5.0.4"
+python-multipart = "^0.0.9"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.3.0"
+isort = "^5.13.2"
+mypy = "^1.9.0"
+flake8 = "^7.0.0"
+pytest = "^8.1.1"
+pytest-asyncio = "^0.23.5"
+
+[build-system]
+requires = ["poetry-core>=1.5.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+
+# Virtualenv
+.venv/
+env/
+venv/
+
+# Poetry
+poetry.lock
+
+# Mypy cache
+.mypy_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# Byte-compiled / cache
+*.log
+
+# Env files
+.env
+.env.*
+
+# Docker
+docker/data/
+docker/volumes/
+*.pid
+
+# Reports
+reports/output/
+*.pdf
+*.html
